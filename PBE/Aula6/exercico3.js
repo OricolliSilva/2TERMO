@@ -6,9 +6,9 @@ function converterParaFahrenheit(celsius) {
     return fahrenheit; //devolve o resultado para quem chamou 
 }
 
-const tempC = entrada.quentionFloat("Digite a temperatura em celsius: \n");
+const tempC = entrada.questionFloat("Digite a temperatura em celsius: \n");
 
 // Chamando a funçao e vguardando o que ela "cuspiu de volta"
 const tempF = converterParaFahrenheit(tempC);
 
-console.log(`A temperatura convertida é: ${tempF.toFixed(1)}F°`)
+console.log(`A temperatura convertida é: ${tempF.toFixed(1)}F°`);
