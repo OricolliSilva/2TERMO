@@ -1,11 +1,11 @@
-const alunos = ["ana", "Bruno", "Carlos", "Diego"];
+const alunos = ["ana", "Bruno", "Carlos", "Diego", "Tonho", "Tião"];
 
 console.log("Lista de alunos:");
 console.log(alunos);
 
-console.log(`Primeiro aluno: %{alunos[0]}`);
-console.log(`Primeiro aluno: %{alunos[1]}`);
-console.log(`Quantidade e alunos: &{alunos.length}`);
+console.log(`Primeiro aluno: ${alunos[0]}`);
+console.log(`último aluno: ${alunos[1]}`);
+console.log(`Último aluno: ${alunos.length}`);
 
 //acrescentr mais 2 nomes ao array;
 //mostrar o terceiro aluno
