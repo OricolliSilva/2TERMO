@@ -1,18 +1,20 @@
-const entrada = require('readline-sync');
+function verificarPeso(leitura) {
 
-console.log("=== SISTEMA DE CALCULO INDUSTRIAL ===");
+    const peso = Number(leitura);
+ 
+    if (isNaN(peso)) {
+        throw new Error("Entrada inválida! Digite apenas números.");
+    }
 
-try {
-    const num1 = entrada.questionInt("Digite o valor da carga (kg): ");
-    const num2 = entrada.questionInt("Dividir por quantas maquinas? ");
-
-    const resultado = num1 / num2;
-    console.log(`Cada maquina recebera: ${resultado.toFixed(2)} kg`);
-
-} catch (erro) {
-    console.log("\n[ERRO DE SISTEMA]");
-    console.log("Desculpe, voce digitou algo que nao e um numero ou o sistema falhou.");
-    console.log("O programa nao travou, mas nao podemos concluir o calculo.");
+    if (peso < 100) {
+        throw new Error("Peso fora do padrão (100g - 500g)! Peça descartada.");
+    }
+ 
+    if (peso > 500) {
+        throw new Error("Peso fora do padrão (100g - 500g)! Peça descartada.");
+    }
+ 
+    return `Peça aprovada com ${peso}g.`;
 }
-
-console.log("\nO sistema continua rodando normalmente...");
+ 
+module.exports = { verificarPeso };
