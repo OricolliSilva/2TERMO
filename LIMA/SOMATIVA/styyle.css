@@ -1,0 +1,175 @@
+body {
+    background-color: #F5F5F5;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    background-color: #213659;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    padding: 60px 20px;
+    margin: 0;
+}
+
+header h1 {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: aliceblue; 
+    margin: 0 10px;   
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 60vh;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+    margin-top: 15px; 
+}
+
+main h1 {
+    text-align: center;
+    color: #213659;
+    margin-bottom: 30px;
+}
+
+main img {
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+main p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+main h2 {
+    color: #213659;
+    margin-top: 20px;
+}
+
+
+.servico {
+    background-color: #E6F0FA;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.servico h3 {
+    color: #213659;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.servico p {
+    color: #4A5568;
+    margin-bottom: 0;
+}
+
+
+.equipe {
+    background-color: #F5F5F5;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.equipe img {
+    width: 300px;
+    height: 200px;
+    border-radius: 0; 
+    margin: 0 auto 15px auto;
+}
+
+.equipe h2 {
+    color: #213659;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.equipe p {
+    color: #4A5568;
+    margin-bottom: 6px;
+}
+
+.projetos {
+    background-color: #F5F5F5;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: left; 
+}
+
+.projetos img {
+    width: 300px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 0; 
+    margin: 0 0 15px 0; 
+    display: block;
+}
+
+.projetos h2 {
+    color: #213659;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.projetos p {
+    color: #4A5568;
+    margin-bottom: 0;
+}
+
+.Contato {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+    margin-top: 15px;
+}
+
+.Contato a {
+    color: #213659;
+}
+
+.orcamento {
+    background-color: #213659;
+    color: #FFFFFF;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+}
+
+footer {
+    background-color: #213659;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #213659;
+    color: white;
+    padding: 15px;
+    border: none;
+}
