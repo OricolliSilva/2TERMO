@@ -116,4 +116,68 @@ INSERT INTO PAGAMENTO (ID_PEDIDO, ID_FORMA_PAGAMENTO, VALOR, DATA_PAGAMENTO) VAL
 (2, 1, 8.50, '2024-05-20 10:01:15'),
 (3, 2, 15.50, '2024-05-20 10:46:00');
 
-SELECT * FROM PAGAMENTO;
+SELECT * FROM categoria;
+
+--ATUALIZAÇÕES E MODIFICAÇÕES E DADOS
+UPDATE cliente
+SET telefone = '19999999901'
+WHERE id_cliente = 
+
+-- TRANSAÇÕES - SEGURANÇA PARA DML
+START TRANSACTION;
+UPDATE produto
+SET preco = preco * 1.5
+WHERE id_categoria = 26;
+
+SELECT id_produto, nome, preco 
+FROM produto
+WHERE id_categoria = 26;
+
+ROLLBACK; --DESFAZ O QUE FIZEMOS DE ERRADO OU VOLTA UMA TRANSAÇÃO
+COMMIT; --VALIDA O PROCEDIMENTO DE TRANSAÇÃO
+
+START TRANSACTION;
+UPDATE cliente SET cidade = 'Santos' WHERE id_cliente = 121;
+COMMIT;
+ROLLBACK;
+
+--PROCEDIMENTO DE UMA COMPRA
+--PASSO 1: 
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES ('Carlos Silva', 'carlossilva@email.com', '19999999999', 'Santos', TRUE);
+SET @cliente_compra = LAST_INSERT_ID();
+
+--PASSO 2:
+INSERT INTO pedido (data_pedido, STATUS_PEDIDO, valor_total, id_cliente) VALUES
+(NOW(), 'ABERTO', 0.00, @cliente_compra);
+SET @pedido_compra = LAST_INSERT_ID();
+
+--PASO 3: INSERINDO ITENS
+INSERT into item_pedido (id_pedido, id_produto, quantidade, preco_unitaria)
+VALUES (@pedido_compra, 4, 1, 13.00), (@pedido_compra, 9, 1, 9.00);
+
+--PASSO 4 - ATUALIZANDO TOTAL E STATUS
+UPDATE pedido
+SET valor_total = 22.00,
+    ststus = 'PREPARANDO'
+WHERE id_pedido = @pedido_compra;
+
+--PASSO 5 - REGISTRAR PAGAMENTO
+INSERT INTO pagamento (id_pedido, ID_FORMA_PAGAMENTO, valor, data_pagamento)
+VALUES (@pedido_compra, 2, 22.00, NOW()); 
+
+--PASSO 6 - CONSULTAR PEDIDO E RESULTADO
+SELECT p.id_pedido,
+       c.nome AS cliente,
+       p.status,
+       p.valor_total
+FROM pedido p 
+JOIN cliente c ON c.ID_CLIENTE = p.ID_CLIENTE
+WHERE p.id_pedido = @pedido_compra;
+
+--PASSO 7 - RELATÓRIO
+--PASSO 1
+SELECT nome FROM cliente WHERE ID_CLIENTE = @cliente_compra;
+SELECT nome FROM cliente WHERE id_cliente = 121;
+
+--PASSO 2 
+SELECT * FROM pedido WHERE id_pedido = @pedido_compra;
