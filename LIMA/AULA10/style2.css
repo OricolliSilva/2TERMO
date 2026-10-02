@@ -1,0 +1,30 @@
+.equipe {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    justify-content: flex-start;   /* Alinha no início */
+  /* justify-content: center; */        /* Centraliza no meio */
+  /* justify-content: flex-end; */      /* Alinha no final */
+  /* justify-content: space-between; */ /* Da um espaço entre os itens */
+  /* justify-content: space-evenly; */  /* Espaçamento totalmente uniforme */
+}
+
+.lorem1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.lorem2 {
+    display: flex;
+    justify-content: center;
+}
+
+.lorem3 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
