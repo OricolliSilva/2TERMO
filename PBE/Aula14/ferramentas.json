@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "baba",
+    "quantidade": 3,
+    "custoUnitario": 234444
+  },
+  {
+    "nome": "efb",
+    "quantidade": 245,
+    "custoUnitario": 2354245
+  },
+  {
+    "nome": "df",
+    "quantidade": 24,
+    "custoUnitario": 135
+  },
+  {
+    "nome": "sefb",
+    "quantidade": 256,
+    "custoUnitario": 1356
+  }
+]
