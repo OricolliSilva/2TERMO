@@ -22,13 +22,13 @@ FROM cliente;
 
 
 -- 4. Liste todos os produtos em ordem crescente de preço.
-SELECT *
+SELECT nome, preco
 FROM produto
 ORDER BY preco ASC;
 
 
 -- 5. Mostre apenas os 5 produtos mais caros.
-SELECT *
+SELECT preco
 FROM produto
 ORDER BY preco DESC
 LIMIT 5;
@@ -36,7 +36,7 @@ LIMIT 5;
 -- PARTE B - FILTROS
 
 -- 6. Liste os produtos com preço entre R$ 8,00 e R$ 15,00.
-SELECT *
+SELECT nome, preco
 FROM produto
 WHERE preco BETWEEN 8.00 AND 15.00;
 
@@ -58,7 +58,7 @@ WHERE telefone IS NULL;
 
 -- 10. Mostre os pedidos FINALIZADOS com valor acima de R$ 20,00,
 --     do maior para o menor valor.
-SELECT id_pedido, data_pedido, valor_total
+SELECT *
 FROM pedido
 WHERE valor_total > 20.00
 AND status = 'FINALIZADOS'
