@@ -1,0 +1,58 @@
+/* EXERCICIO 1 */
+
+/* .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+ */
+
+/* EXERCICIO 2 */
+/* .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+} */
+
+/* EXERCICIO 3 */
+
+/* .lab-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+} */
+
+/* EXERCICIO 4 */
+
+/* .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+} */
+
+/* EXERCICIO 5 */
+
+/* Desktop */
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet */
+@media (max-width: 500px) {
+    .lab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celular */
+@media (max-width: 300px) {
+    .lab-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* EXERCICIO 6 */
+
+/* .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+} */
+
+/* Na 5, o layout do site só vai mudar quando atingir o tamanho definido< como: 500px ou 300px, já mo 6 o navegador vai mudar o layout mandando todos os itens para baixo quando ficar sem espaço */

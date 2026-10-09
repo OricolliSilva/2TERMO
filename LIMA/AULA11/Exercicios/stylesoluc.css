@@ -1,0 +1,39 @@
+/* SOLUÇÃO 1 */
+
+.solucoes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width: 500px) {
+    .solucoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 300px) {
+    .solucoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SOLUÇÃO 2 */
+
+.solucoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+}
+
+/* 6 E 7 */
+
+/* NÚMERO 6*/
+/* A SEGUNDA TEM MENOS REGRAS POR QUE RESOLVE TUDO COM MENOS PROGRAMAÇÃO */
+
+/* NÚMERO 7*/
+/*  */
