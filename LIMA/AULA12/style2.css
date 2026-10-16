@@ -1,0 +1,66 @@
+:root { 
+    /* Paleta de cores */
+    --espresso: #2b170d;
+    --cafe: #5a321b;
+    --caramelo: #c87a32;
+    --caféleite: #D6C6B4;
+    --texto: #1e140f;
+    --branco: #ffffff;
+
+    /* Atualização no :root */
+    --fonte-principal: "Poppins", sans-serif;
+    --fonte-secundaria: "Open Sans", sans-serif;
+}
+
+/* Hierarquia */
+h1, h2, h3 {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    color: var(--espresso);
+}
+
+h1 {
+    font-size: 3rem;       
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--caramelo);
+}
+
+h2 {
+    font-size: 2rem;       
+    line-height: 1.25;
+    font-weight: 600;
+    color: var(--cafe);
+}
+
+h3 {
+    font-size: 1.25rem;    
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--caféleite);
+}
+
+/* Botão */
+.btn {
+    background-color: var(--caramelo);
+    color: var(--branco);
+    padding: 12px 24px;
+    border-radius: 36px;
+}
+
+.btn:hover {
+    background-color: var(--cafe);
+}
+
+/* Cards */
+.card {
+    background-color: var(--branco);
+    border: 1px solid var(--cafe);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
