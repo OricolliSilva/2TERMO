@@ -109,3 +109,62 @@ FROM LIVRO
 WHERE ano_publicacao BETWEEN 2015 AND 2025;
 
 -- 16 ------------------------------------------------------------------------
+SELECT 
+    COUNT(*) AS total_registros,
+    SUM(quantidade_disponivel) AS estoque_total,
+    ROUND(AVG(quantidade_disponivel), 2) AS media_estoque,
+    MIN(quantidade_disponivel) AS menor_estoque,
+    MAX(quantidade_disponivel) AS maior_estoque
+FROM LIVRO;
+
+-- 17 ------------------------------------------------------------------------
+SELECT e.id_emprestimo, u.nome AS usuario, l.titulo AS livro, e.data_emprestimo, e.status_emprestimo
+FROM EMPRESTIMO e
+JOIN USUARIO u ON e.id_usuario = u.id_usuario
+JOIN LIVRO l ON e.id_livro = l.id_livro;
+
+-- 18 -------------------------------------------------------------------------
+SELECT e.id_emprestimo, u.nome AS usuario, l.titulo AS livro, e.status_emprestimo
+FROM EMPRESTIMO e
+JOIN USUARIO u ON e.id_usuario = u.id_usuario
+JOIN LIVRO l ON e.id_livro = l.id_livro
+WHERE e.status_emprestimo = 'ABERTO';
+
+-- 19 --------------------------------------------------------------------------
+SELECT u.nome, COUNT(e.id_emprestimo) AS total_emprestimos
+FROM USUARIO u
+JOIN emprestimo E ON u.id_usuario = e.id_usuario
+GROUP BY u.id_usuario, u.nome
+ORDER BY total_emprestimos DESC;
+
+-- 20 ----------------------------------------------------------------------------
+SELECT u.nome, COUNT(e.id_emprestimo) AS total_emprestimos
+FROM USUARIO u
+LEFT JOIN EMPRESTIMO e ON u.id_usuario = e.id_usuario
+GROUP BY u.id_usuario, u.nome;
+
+-- 21 ----------------------------------------------------------------------------
+START TRANSACTION;
+INSERT INTO EMPRESTIMO (data_prevista, id_usuario, id_livro) VALUES ('2026-11-10', 1, 3);
+UPDATE LIVRO SET quantidade_disponivel = quantidade_disponivel - 1 WHERE id_livro = 3;
+SELECT * FROM LIVRO WHERE id_livro = 3;
+COMMIT;
+
+-- 22 -----------------------------------------------------------------------------
+START TRANSACTION;
+UPDATE LIVRO SET quantidade_disponivel = 99 WHERE id_livro = 1;
+SELECT * FROM LIVRO WHERE id_livro = 1;
+ROLLBACK;
+SELECT * FROM LIVRO WHERE id_livro = 1;
+
+-- 23 -----------------------------------------------------------------------------
+START TRANSACTION;
+UPDATE LIVRO SET quantidade_disponivel = quantidade_disponivel + 1 WHERE id_livro = 1;
+SAVEPOINT ponto1;
+UPDATE LIVRO SET quantidade_disponivel = quantidade_disponivel + 5 WHERE id_livro = 2;
+ROLLBACK TO SAVEPOINT ponto1;
+COMMIT;
+
+-- 24 --------------------------------------------------------------------------------
+START TRANSACTION;
+UPDATE EMPRESTIMO SET status_emprestimo = 'DEVOLVIDO'  
