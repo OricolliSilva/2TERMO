@@ -3,116 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMARTCOFFEE</title>
+    <meta name="description" content="SmartCoffee: cafés especiais, tecnologia e um ambiente acolhedor para conectar pessoas.">
+
+    <title>SmartCoffee | Café que conecta as pessoas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <header class="header-principal">
-        <a href="#inicio" class="logo">Smart<span>Coffee</span></a>
-        <nav>
+        <a href="#inicio" class="logo" aria-label="SmartCoffee - início">
+            Smart<span>Coffee</span>
+        </a>
+
+        <nav aria-label="Navegação principal">
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#cafes">Produtos</a></li>
+                <li><a href="#ambiente">Ambiente</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
-        <section id="inicio" class="banner section1">
+        <!-- INÍCIO -->
+        <section id="inicio" class="banner section-rosa">
             <div class="conteudo-texto">
-                <h1>Café que conecta as pessoas</h1>
-                <p>Mais que café, uma experiência</p>
-                <a href="#cafes" class="btn">Ver cardápio</a>
+                <span class="etiqueta">Seu momento, do seu jeito</span>
+
+                <h1>Café que conecta <span>as pessoas.</span></h1>
+
+                <p>
+                    Mais que café, uma experiência feita de bons sabores,
+                    boas ideias e encontros especiais.
+                </p>
+
+                <div class="botoes">
+                    <a href="#cafes" class="btn btn-cheio">
+                        Ver cardápio
+                    </a>
+
+                    <a href="#contato" class="btn">
+                        Fale com a gente
+                    </a>
+                </div>
             </div>
-            <figure class="imagem-caixa">
-                <img src="https://images.unsplash.com/photo-1760175445000-0e01e193d1cd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Café Servido no SmartCoffee">
+
+            <figure class="imagem-caixa imagem-destaque">
+                <img
+                    src="https://images.unsplash.com/photo-1760175445000-0e01e193d1cd?q=80&w=1170&auto=format&fit=crop"
+                    alt="Café servido para aproveitar um momento especial"
+                >
             </figure>
         </section>
 
-        <section id="sobre" class="sobre section2">
+        <!-- SOBRE -->
+        <section id="sobre" class="sobre section-creme">
             <div class="conteudo-texto">
-                <h2>Sobre nós</h2>
-                <p>A SmartCoffee combina café de qualidade, 
-                tecnologia e um ambiente acolhedor.</p>
-                <a href="#sobre" class="btn">Sobre</a>
+                <span class="etiqueta">Prazer, somos a SmartCoffee</span>
+
+                <h2>Pequenas pausas, grandes conexões.</h2>
+
+                <p>
+                    A SmartCoffee combina café de qualidade, tecnologia
+                    e um ambiente acolhedor. Um lugar para desacelerar,
+                    trocar ideias e aproveitar cada gole.
+                </p>
+
+                <a href="#ambiente" class="btn">
+                    Conheça o espaço
+                </a>
             </div>
+
             <figure class="imagem-caixa">
-                <img src="https://images.unsplash.com/photo-1591261730799-ee4e6c2d16d7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ambiente da SmartCoffee">
+                <img
+                    src="https://images.unsplash.com/photo-1591261730799-ee4e6c2d16d7?q=80&w=1170&auto=format&fit=crop"
+                    alt="Ambiente aconchegante de cafeteria"
+                    loading="lazy"
+                >
             </figure>
         </section>
 
-        <section id="cafes" class="cafes section1">
-            <h2>Nossos cafés</h2>
+        <!-- DIFERENCIAIS -->
+        <section id="diferenciais" class="diferenciais section-rosa">
+            <div class="titulo-secao">
+                <span class="etiqueta">O que torna especial</span>
+
+                <h2>Mais motivos para ficar.</h2>
+
+                <p>
+                    Detalhes pensados para transformar uma simples pausa
+                    em um bom momento.
+                </p>
+            </div>
+
+            <ul class="lista-diferenciais">
+                <li>
+                    <span class="numero-card">01</span>
+
+                    <h3>Café de qualidade</h3>
+
+                    <p>
+                        Grãos bem escolhidos e preparo cuidadoso,
+                        do espresso ao latte.
+                    </p>
+                </li>
+
+                <li>
+                    <span class="numero-card">02</span>
+
+                    <h3>Tecnologia</h3>
+
+                    <p>
+                        Mais praticidade no dia a dia para você aproveitar
+                        sem complicação.
+                    </p>
+                </li>
+
+                <li>
+                    <span class="numero-card">03</span>
+
+                    <h3>Ambiente acolhedor</h3>
+
+                    <p>
+                        Um espaço confortável para trabalhar, estudar
+                        ou simplesmente relaxar.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CARDÁPIO -->
+        <section id="cafes" class="cafes section-creme">
+            <div class="titulo-secao">
+                <span class="etiqueta">Feitos para você</span>
+
+                <h2>Nossos cafés</h2>
+
+                <p>
+                    Escolha seu favorito e deixe o dia um pouco mais gostoso.
+                </p>
+            </div>
+
             <ul class="lista-cafes">
                 <li>
                     <article class="card-cafe">
-                        <img src="https://images.unsplash.com/photo-1503481766315-7a586b20f66d?q=80&w=1153&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cappuccino Tradicional">
-                        <p> <b>Capuccino Tradicional</b><br>
-                          Equilibrio entre sabor e cremosidade.</p>
-                        <b><strong>R$ 14,90</strong></b>
+                        <img
+                            src="https://images.unsplash.com/photo-1503481766315-7a586b20f66d?q=80&w=1153&auto=format&fit=crop"
+                            alt="Cappuccino tradicional com espuma cremosa"
+                            loading="lazy"
+                        >
+
+                        <div class="card-conteudo">
+                            <h3>Cappuccino Tradicional</h3>
+
+                            <p>
+                                Equilíbrio perfeito entre sabor e cremosidade.
+                            </p>
+
+                            <p class="preco">R$ 14,90</p>
+                        </div>
                     </article>
                 </li>
+
                 <li>
                     <article class="card-cafe">
-                        <img src="https://images.unsplash.com/photo-1587080413959-06b859fb107d?q=80&w=892&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Latte Caramelo">
-                        <p><b>Latte Caramelo</b><br>Leve, Doce e Irresistivél.</p>
-                        <b><strong> R$ 16,90</strong></b>
+                        <img
+                            src="https://images.unsplash.com/photo-1587080413959-06b859fb107d?q=80&w=892&auto=format&fit=crop"
+                            alt="Latte com leite cremoso"
+                            loading="lazy"
+                        >
+
+                        <div class="card-conteudo">
+                            <h3>Latte Caramelo</h3>
+
+                            <p>
+                                Leve, doce e irresistível a cada gole.
+                            </p>
+
+                            <p class="preco">R$ 16,90</p>
+                        </div>
                     </article>
                 </li>
+
                 <li>
                     <article class="card-cafe">
-                        <img src="https://images.unsplash.com/photo-1760175445000-0e01e193d1cd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Espresso Especial">
-                        <p><b>Espresso Especial</b><br>
-                          Intenso como boas conversas.</p>
-                          <b><strong>R$ 12,90</strong></b>
+                        <img
+                            src="https://images.unsplash.com/photo-1760175445000-0e01e193d1cd?q=80&w=1170&auto=format&fit=crop"
+                            alt="Xícara de espresso especial"
+                            loading="lazy"
+                        >
+
+                        <div class="card-conteudo">
+                            <h3>Espresso Especial</h3>
+
+                            <p>
+                                Intenso, marcante e perfeito para boas conversas.
+                            </p>
+
+                            <p class="preco">R$ 12,90</p>
+                        </div>
                     </article>
                 </li>
             </ul>
         </section>
 
-        <section id="ambiente" class="ambiente section2">
+        <!-- AMBIENTE -->
+        <section id="ambiente" class="ambiente section-verde">
             <figure class="imagem-caixa">
-                <img src="https://images.unsplash.com/photo-1723532623416-89c7bdcce044?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Espaço Interno da SmartCoffee">
+                <img
+                    src="https://images.unsplash.com/photo-1723532623416-89c7bdcce044?q=80&w=1175&auto=format&fit=crop"
+                    alt="Espaço interno moderno e confortável da cafeteria"
+                    loading="lazy"
+                >
             </figure>
+
             <div class="conteudo-texto">
-                <h4>Nosso ambiente</h4><br>
-                <h1>Um espaço para boas ideias</h1>
-                <p>Ambiente moderno, acolhedor e pensado para 
-                    trabalhar, estudar ou apenas relaxar .</p>
-                <a href="#contato" class="btn">Conheça</a>
+                <span class="etiqueta etiqueta-clara">
+                    Seu novo lugar favorito
+                </span>
+
+                <h2>Um espaço para boas ideias.</h2>
+
+                <p>
+                    Ambiente moderno, acolhedor e pensado para trabalhar,
+                    estudar, encontrar pessoas ou apenas relaxar.
+                </p>
+
+                <a href="#contato" class="btn btn-claro">
+                    Venha conhecer
+                </a>
             </div>
         </section>
 
-        <section id="contato" class="contato section1">
+        <!-- CONTATO -->
+        <section id="contato" class="contato section-creme">
             <div class="conteudo-texto">
-                <h4>Contato</h4><br>
-                <h1>Fale com a Gente</h1>
-                <p>Tem dúvidas, sugestões ou quer fazer um evento?
-                    Envie sua mensagem.</p>
+                <span class="etiqueta">Vamos conversar?</span>
+
+                <h2>Fale com a gente.</h2>
+
+                <p>
+                    Tem dúvidas, sugestões ou quer conversar sobre um evento?
+                    Envie sua mensagem. Será um prazer falar com você.
+                </p>
+
+                <p class="nota-formulario">
+                    Preencha os campos ao lado para preparar sua mensagem.
+                </p>
             </div>
-            <form class="form-contato">
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="E-mail">
-                <textarea rows="4" placeholder="Mensagem..."></textarea>
-                <button type="submit" class="btn">Enviar</button>
+
+            <form class="form-contato" action="#" method="post">
+                <label for="nome">Nome</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Como podemos chamar você?"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email">E-mail</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="voce@exemplo.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="mensagem">Mensagem</label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="4"
+                    placeholder="Escreva sua mensagem..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn btn-cheio">
+                    Enviar mensagem
+                </button>
+
+                <p class="aviso-formulario">
+                    Este formulário precisa ser conectado a um serviço
+                    para enviar mensagens de verdade.
+                </p>
             </form>
         </section>
     </main>
 
+    <!-- RODAPÉ -->
     <footer class="footer-principal">
-        <p class="logo-footer">SmartCoffee</p>
-        <nav>
+        <a href="#inicio" class="logo logo-footer">
+            Smart<span>Coffee</span>
+        </a>
+
+        <p>© 2026 SmartCoffee. Café que conecta as pessoas.</p>
+
+        <nav aria-label="Redes sociais">
             <ul>
-                <li><a href="#instagram">Instagram</a></li>
-                <li><a href="#tiktok">TikTok</a></li>
-                <li><a href="#zap">WhatsApp</a></li>
+                <li>
+                    <a href="https://www.instagram.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.tiktok.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        TikTok
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        WhatsApp
+                    </a>
+                </li>
             </ul>
         </nav>
     </footer>
-
 </body>
 </html>
