@@ -84,7 +84,7 @@ ul {
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid rgba(18, 61, 50, 0.25);
-    box-shadow: 0 8px 26px rgba(18, 61, 50, 0.13);
+    box-shadow: 0 8px 26px rgba(255, 0, 0, 0.12);
 }
 
 .logo {
