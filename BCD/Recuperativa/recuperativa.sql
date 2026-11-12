@@ -132,3 +132,62 @@ SELECT titulo, quantidade_disponivel
 FROM JOGO
 WHERE quantidade_disponivel > 2
 ORDER BY quantidade_disponivel DESC;
+
+-- 15 -----------------------------------------------------------------------
+SELECT ID_JOGO, TITULO, ANO_LANCAMENTO
+FROM JOGO
+WHERE titulo LIKE '%STARS%';
+
+-- 16 ------------------------------------------------------------------------
+
+SELECT ID_JOGO, TITULO, ANO_LANCAMENTO
+FROM JOGO
+WHERE ANO_LANCAMENTO BETWEEN 1990 AND 2005;
+
+-- 17 ------------------------------------------------------------------------
+
+SELECT
+    COUNT(*) AS total_jogos,
+    SUM(QUANTIDADE_DISPONIVEL) AS ESTOQUE_TOTAL,
+    AVG(QUANTIDADE_DISPONIVEL) AS MEDIA_DO_ESTOQUE,
+    MIN(QUANTIDADE_DISPONIVEL) AS MENOR_ESTOQUE,
+    MAX(QUANTIDADE_DISPONIVEL) AS MAIOR_ESTOQUE
+FROM JOGO;
+
+-- 18 ------------------------------------------------------------------------
+
+SELECT
+    L.ID_LOCACAO,
+    C.NOME AS NOME,
+    J.TITULO AS TITULO,
+    L.DATA_RETIRADA,
+    L.STATUS_LOCACAO
+FROM LOCACAO L
+INNER JOIN CLIENTES C ON L.ID_USUARIO = C.ID_USUARIO
+INNER JOIN JOGO J ON L.ID_JOGO = J.ID_JOGO;
+
+
+-- 19 ------------------------------------------------------------------------
+
+SELECT
+    L.ID_LOCACAO,
+    C.NOME AS NOME,
+    J.TITULO AS TITULO,
+    L.DATA_RETIRADA,
+    L.STATUS_LOCACAO
+FROM LOCACAO L
+INNER JOIN CLIENTES C ON L.ID_USUARIO = C.ID_USUARIO
+INNER JOIN JOGO J ON L.ID_JOGO = J.ID_JOGO
+WHERE L.STATUS_LOCACAO = 'ABERTA';
+
+-- 20 --------------------------------------------------------------------------
+
+SELECT
+    C.ID_USUARIO,
+    C.NOME,
+    COUNT(L.ID_LOCACAO) AS QUANTIDADE_LOCACOES
+FROM CLIENTES C
+INNER JOIN LOCACAO L ON C.ID_USUARIO = L.ID_USUARIO
+GROUP BY C.ID_USUARIO, C.NOME
+ORDER BY QUANTIDADE_LOCACOES DESC;
+
